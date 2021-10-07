@@ -17,3 +17,13 @@
 ## Quickstart
 
 [Install the latest Cookiecutter](https://cookiecutter.readthedocs.io/en/latest/installation.html) if you haven't installed it yet (this requires Cookiecutter 1.4.0 or higher):
+
+```
+pip install -U cookiecutter
+```
+
+Generate a Python package project:
+
+```
+cookiecutter https://github.com/kipyin/pyproject-boilerplate
+```
