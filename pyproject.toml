@@ -27,7 +27,6 @@ line-length = 80
 py36 = true
 skip-string-normalization = true
 skip-numeric-underscore-normalization = true
-extend-exclude = "{{ cookiecutter.project_slug }}/*"
 
 [tool.towncrier]
 package = "pyproject-template"
