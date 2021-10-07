@@ -1,0 +1,62 @@
+[tool.poetry]
+name = "Python Project Boilerplate"
+version = "2021.0.0"
+description = "Python project boilerplate powered by cookiecutter"
+authors = ["Kip Yin <28321392+kipyin@users.noreply.github.com>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+cookiecutter = "^1.7.3"
+click = "^8.0.1"
+
+[tool.poetry.dev-dependencies]
+pytest = "^6.2.5"
+tox = "^3.24.4"
+black = "^21.9b0"
+mypy = "^0.910"
+isort = "^5.9.3"
+docformatter = "^1.4"
+towncrier = "^21.3.0"
+pre-commit = "^2.15.0"
+pytest-cookies = "^0.6.1"
+
+[tool.black]
+line-length = 80
+py36 = true
+skip-string-normalization = true
+skip-numeric-underscore-normalization = true
+
+[tool.towncrier]
+package = "pyproject-template"
+filename = "CHANGELOG.md"
+directory = "news"
+issue_format = "[#{issue}](https://github.com/kipyin/pyproject-template/issues/{issue})"
+title_format = "## {version} ({project_date})"
+start_string = "<!-- TOWNCRIER -->\n"
+underlines = ["", "", ""]
+template = "news/TEMPLATE"
+
+[[tool.towncrier.type]]
+directory = "bugfix"
+name = "Bugfixes"
+showcontent = true
+
+[[tool.towncrier.type]]
+directory = "dev"
+name = "Development Changes"
+showcontent = true
+
+[[tool.towncrier.type]]
+directory = "docs"
+name = "Improved Documentation"
+showcontent = true
+
+[[tool.towncrier.type]]
+directory = "feature"
+name = "Features"
+showcontent = true
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
