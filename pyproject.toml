@@ -20,12 +20,14 @@ docformatter = "^1.4"
 towncrier = "^21.3.0"
 pre-commit = "^2.15.0"
 pytest-cookies = "^0.6.1"
+tox-pyenv = "^1.1.0"
 
 [tool.black]
 line-length = 80
 py36 = true
 skip-string-normalization = true
 skip-numeric-underscore-normalization = true
+extend-exclude = "{{ cookiecutter.project_slug }}/*"
 
 [tool.towncrier]
 package = "pyproject-template"
